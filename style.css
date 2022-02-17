@@ -1,0 +1,91 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-color: #1992d4;
+}
+
+html {
+  font-size: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 4fr;
+  grid-template-rows: 1fr 5fr;
+}
+
+a {
+  color: #ffffff;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sidebar {
+  font-size: 1.8rem;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 2;
+  padding: 15px 1% 15px 8%;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background-color: var(--blue-color);
+  display: grid;
+  grid-template-rows: 1fr 4fr 4fr;
+}
+
+header {
+  grid-column: 2 / 3;
+  background-color: gray;
+}
+
+main {
+  grid-column: 2 / 3;
+  background-color: aquamarine;
+}
+
+.logo {
+  place-self: top stretch;
+}
+
+.logo img {
+  width: 35px;
+  height: auto;
+}
+
+.logo span {
+  vertical-align: middle;
+  font-size: 2.2rem;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.nav1 ul,
+.nav2 ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.sidebar li:hover {
+  transform: scale(1.1);
+}
+
+.sidebar a:hover {
+  color: orange;
+}
+
+.sidebar img {
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.sidebar li span {
+  vertical-align: middle;
+}
